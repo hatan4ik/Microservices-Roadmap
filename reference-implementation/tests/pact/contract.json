@@ -1,0 +1,28 @@
+{
+  "consumer": {
+    "name": "web-checkout"
+  },
+  "provider": {
+    "name": "catalog"
+  },
+  "interactions": [
+    {
+      "description": "get product list",
+      "request": {
+        "method": "GET",
+        "path": "/v1/products"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  }
+}

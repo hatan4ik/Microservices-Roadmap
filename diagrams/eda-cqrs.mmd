@@ -1,0 +1,13 @@
+```mermaid
+flowchart LR
+  Client-->API[API Gateway]
+  API-->Cmd[Command Service]
+  Cmd-->DB[(Write DB)]
+  Cmd-->Outbox[(Outbox Table)]
+  Outbox-->Relay[Outbox Relay]
+  Relay-->Bus[(Event Bus)]
+  Bus-->Proj[Projection Builder]
+  Proj-->ReadDB[(Read Model)]
+  Client-->Q[Query API]
+  Q-->ReadDB
+```

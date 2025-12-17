@@ -1,0 +1,45 @@
+services:
+  catalog:
+    build: ../services/catalog-go
+    environment:
+      - CATALOG_ADDR=:8080
+    ports:
+      - "8080:8080"
+
+  orders:
+    build: ../services/orders-go
+    environment:
+      - ORDERS_GRPC_ADDR=:50051
+    ports:
+      - "50051:50051"
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=app
+    ports:
+      - "5432:5432"
+
+  redpanda:
+    image: redpandadata/redpanda:v24.2.11
+    command:
+      - redpanda
+      - start
+      - --overprovisioned
+      - --smp
+      - "1"
+      - --memory
+      - "1G"
+      - --reserve-memory
+      - "0M"
+      - --node-id
+      - "0"
+      - --check=false
+      - --kafka-addr
+      - "PLAINTEXT://0.0.0.0:9092"
+      - --advertise-kafka-addr
+      - "PLAINTEXT://redpanda:9092"
+    ports:
+      - "9092:9092"

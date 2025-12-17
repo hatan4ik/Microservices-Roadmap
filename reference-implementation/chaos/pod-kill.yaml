@@ -1,0 +1,14 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata:
+  name: kill-one-orders-pod
+  namespace: mszth
+spec:
+  action: pod-kill
+  mode: one
+  selector:
+    namespaces:
+      - mszth
+    labelSelectors:
+      app: orders
+  duration: "30s"
