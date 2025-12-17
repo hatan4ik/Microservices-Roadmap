@@ -27,6 +27,7 @@ If you want to learn by running the code while you read, start with:
 
 - Docs index: [`docs/README.md`](README.md)
 - Lab 01 (bring up the local stack): [`labs/01-local-run.md`](../labs/01-local-run.md)
+- Reference implementation map (where examples live): [`docs/97-reference-implementation.md`](97-reference-implementation.md)
 
 ## A practical maturity model
 

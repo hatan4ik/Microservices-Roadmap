@@ -16,6 +16,11 @@ This folder is the core learning path for the repo. Each chapter is short, opini
 10. [09 — Observability + AIOps](09-observability-aiops.md)
 11. [10 — Advanced testing](10-testing.md)
 
+## Reference implementation
+
+- Map (how chapters connect to code/manifests): [Reference implementation map](97-reference-implementation.md)
+- Root folder: [`reference-implementation/`](../reference-implementation/)
+
 ## Supporting docs
 
 - [Glossary](98-glossary.md)
