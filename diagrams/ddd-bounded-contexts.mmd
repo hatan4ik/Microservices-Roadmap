@@ -1,12 +1,11 @@
-```mermaid
 flowchart TB
-  subgraph Catalog Context
+  subgraph "Catalog Context"
     C1[Catalog Service]
     CDB[(Catalog DB)]
     C1-->CDB
   end
 
-  subgraph Orders Context
+  subgraph "Orders Context"
     O1[Orders Service]
     ODB[(Orders DB)]
     O1-->ODB
@@ -14,4 +13,3 @@ flowchart TB
 
   C1-- ProductUpdated event -->O1
   O1-- OrderPlaced event -->C1
-```
