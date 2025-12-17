@@ -8,13 +8,28 @@ It’s written like a practical “field guide”: **concepts → trade-offs →
 
 ## How to use this repo (recommended learning path)
 
-1. Read the roadmap: `docs/00-roadmap.md`
-2. Work through chapters in order (`docs/01-*` … `docs/10-*`)
-3. Run the reference implementation locally: `reference-implementation/infra/docker-compose.yml`
-4. Deploy to Kubernetes (kind/minikube or real cluster): `reference-implementation/k8s/`
-5. Add governance, mesh, chaos, and CI: `reference-implementation/{policies,mesh,chaos,.github}`
+1. Start at the docs index: [`docs/README.md`](docs/README.md)
+2. Read the roadmap: [`docs/00-roadmap.md`](docs/00-roadmap.md)
+3. Work through chapters in order (`docs/01-*` … `docs/10-*`)
+4. Run the reference implementation locally: [`labs/01-local-run.md`](labs/01-local-run.md)
+5. Deploy to Kubernetes (kind/minikube or real cluster): [`reference-implementation/k8s/`](reference-implementation/k8s/)
+6. Add governance examples:
+   - policies: [`reference-implementation/policies/`](reference-implementation/policies/)
+   - mesh: [`reference-implementation/mesh/`](reference-implementation/mesh/)
+   - chaos: [`reference-implementation/chaos/`](reference-implementation/chaos/)
+   - CI: [`reference-implementation/.github/workflows/`](reference-implementation/.github/workflows/)
 
 ---
+
+## Quickstart (local)
+
+```bash
+cd reference-implementation
+make up
+curl http://localhost:8080/healthz
+curl http://localhost:8080/v1/products
+make down
+```
 
 ## Repo structure
 
@@ -23,7 +38,7 @@ It’s written like a practical “field guide”: **concepts → trade-offs →
 - `reference-implementation/`
   - `services/` – small services (Go HTTP + Go gRPC)
   - `proto/` – protobuf IDL
-  - `infra/` – local dev stack (Postgres + Kafka-compatible broker + observability)
+  - `infra/` – local dev stack (Postgres + Kafka-compatible broker)
   - `k8s/` – Kubernetes manifests (deploy, svc, hpa, pdb, networkpolicy)
   - `gitops/` – Argo CD example
   - `policies/` – OPA/Rego + Kyverno examples

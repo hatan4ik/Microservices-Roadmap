@@ -3,16 +3,21 @@
 Microservices are **a socio-technical system**: architecture + teams + operations. A “microservice migration”
 that ignores *org structure*, *deployment*, or *observability* usually ships a distributed monolith.
 
-This roadmap is organized around **interconnected disciplines**:
+This roadmap is organized around **interconnected disciplines** that map directly to the chapters in `docs/`:
 
-1. **Modern architectures**: DDD, event-driven, CQRS, serverless, service mesh
-2. **Service communication**: Kafka/Pulsar, gRPC/HTTP, GraphQL federation, WebSockets/MQTT
-3. **Cloud-native infrastructure**: Kubernetes, operators, GitOps, multi-cloud/hybrid
-4. **API management**: gateways, GraphQL gateways, zero-trust enforcement
-5. **DevSecOps**: scanning, secrets, policy-as-code
-6. **Resilience**: circuit breakers, rate limits, chaos engineering
-7. **Observability + AIOps**: tracing/metrics/logs, correlation, predictive alerting
-8. **Advanced testing**: contracts, failover drills, synthetic monitoring
+1. **Service boundaries (DDD)**: bounded contexts, ownership, data boundaries
+2. **Async integration (EDA + CQRS)**: events, projections, idempotency, sagas
+3. **Communication portfolio**: HTTP, gRPC, events, streaming/realtime, GraphQL
+4. **Cloud-native runtime**: Kubernetes, operators, GitOps, multi-env repeatability
+5. **Traffic + identity**: service mesh (mTLS, retries/timeouts, traffic shifting)
+6. **Edge + API governance**: gateways, versioning, zero trust
+7. **Secure delivery**: DevSecOps, secrets, policy-as-code, supply chain hygiene
+8. **Reliability**: timeouts, rate limits, circuit breakers, chaos engineering
+9. **Observability**: logs/metrics/traces, correlation, SLOs, AIOps patterns
+10. **Testing at scale**: contracts, drills, synthetic monitoring
+
+If you only remember one thing: **do fewer things, end-to-end, with high quality** (telemetry + deployability)
+before you add more services.
 
 ---
 
@@ -45,14 +50,27 @@ This roadmap is organized around **interconnected disciplines**:
 
 ---
 
+## Common migration traps (and safer defaults)
+
+- **“Microservices first”** → start with a modular monolith; extract services only when boundaries are stable.
+- **Shared databases** → one service owns its data; integrate via APIs/events.
+- **Async without observability** → add trace IDs + dashboards before you add more event flows.
+- **Too much sync chaining** → keep user journeys shallow; prefer async for cross-domain integration.
+- **Platform last** → standardize delivery, networking, and runtime early (K8s + GitOps basics).
+
 ## What to build while learning
 
 This repo’s reference implementation intentionally stays small:
 - one HTTP service (Catalog)
 - one gRPC service (Orders)
-- an event topic for cross-service communication
-- minimal infra to demonstrate the patterns
+- Postgres + a Kafka-compatible broker (Redpanda) in the local stack
+- Kubernetes manifests + GitOps/policy/mesh/chaos/testing examples
+
+Some patterns are **described in docs and left as exercises** in code (by design). The goal is to learn the
+decisions and trade-offs without getting buried in app complexity.
 
 You’ll learn the *mechanics* without getting lost in app details.
 
-Next: `docs/01-ddd.md`
+---
+
+**Next:** [01 — Domain-Driven Design (DDD)](01-ddd.md)
