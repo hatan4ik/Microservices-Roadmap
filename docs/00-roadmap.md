@@ -21,6 +21,13 @@ before you add more services.
 
 ---
 
+## Start here (hands-on)
+
+If you want to learn by running the code while you read, start with:
+
+- Docs index: [`docs/README.md`](README.md)
+- Lab 01 (bring up the local stack): [`labs/01-local-run.md`](../labs/01-local-run.md)
+
 ## A practical maturity model
 
 **Level 0 — Single service (monolith or modular):**

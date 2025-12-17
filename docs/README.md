@@ -23,6 +23,7 @@ This folder is the core learning path for the repo. Each chapter is short, opini
 
 ## Labs
 
+- Labs live in `labs/` (start here): [Labs index](../labs/README.md)
 - [Lab 01 — Run the reference system locally](../labs/01-local-run.md)
 
 ## Contributing to docs
@@ -33,4 +34,3 @@ If you add or edit chapters, keep them:
 - vendor-neutral by default (call out vendor specifics explicitly)
 
 Use the chapter template: [`docs/_template.md`](./_template.md)
-

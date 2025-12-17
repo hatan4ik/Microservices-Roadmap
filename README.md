@@ -35,6 +35,7 @@ make down
 
 - `docs/` – chapters (O’Reilly-style narrative + checklists)
 - `diagrams/` – Mermaid diagrams you can paste into GitHub or Docs
+- `labs/` – hands-on walkthroughs (start with `labs/01-local-run.md`)
 - `reference-implementation/`
   - `services/` – small services (Go HTTP + Go gRPC)
   - `proto/` – protobuf IDL
