@@ -1,4 +1,4 @@
-# Microservices Zero-to-Hero (O’Reilly-style training repo)
+# Microservices Zero-to-Hero
 
 This repo is a **self-contained training path** for building microservices that scale: architecture, comms, cloud-native infra, DevSecOps, resilience, observability, and advanced testing.
 
