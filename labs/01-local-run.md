@@ -5,7 +5,7 @@
 ## Prerequisites
 
 - Docker Desktop (or Docker Engine) with Docker Compose v2
-- `make`
+- `make` (optional)
 
 Optional:
 - `grpcurl` (to call the gRPC service from your terminal)
@@ -17,6 +17,12 @@ From repo root:
 ```bash
 cd reference-implementation
 make up
+```
+
+No `make`? Run Docker Compose directly:
+
+```bash
+docker compose -f infra/docker-compose.yml up -d --build
 ```
 
 This starts:
@@ -40,6 +46,12 @@ grpcurl -plaintext -d '{"customer_id":"c1","item_ids":["p1","p2"]}' localhost:50
 
 ```bash
 make down
+```
+
+No `make`? Run:
+
+```bash
+docker compose -f infra/docker-compose.yml down -v
 ```
 
 ## Troubleshooting

@@ -31,6 +31,13 @@ curl http://localhost:8080/v1/products
 make down
 ```
 
+No `make`? Use Docker Compose directly:
+
+```bash
+docker compose -f reference-implementation/infra/docker-compose.yml up -d --build
+docker compose -f reference-implementation/infra/docker-compose.yml down -v
+```
+
 ## Repo structure
 
 - `docs/` – chapters (O’Reilly-style narrative + checklists)
@@ -52,9 +59,15 @@ make down
 
 ## Prerequisites
 
-- Docker + Docker Compose
-- Go 1.22+ (for the reference services)
-- kubectl + a cluster (kind/minikube is fine) for the K8s chapters
+Minimum (local quickstart):
+- Docker Desktop / Docker Engine with Docker Compose v2
+- `make` (optional; you can use `docker compose` directly)
+
+For running tests locally:
+- Go 1.22+
+
+For Kubernetes chapters:
+- `kubectl` + a cluster (kind/minikube is fine)
 
 Optional (for deeper chapters):
 - Argo CD or Flux
