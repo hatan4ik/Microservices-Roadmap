@@ -4,6 +4,8 @@ This repo includes a small “reference implementation” that you can run local
 
 **Start here:** [Lab 01 — Run the reference system locally](../labs/01-local-run.md)
 
+If you want Kubernetes next: [Lab 02 — Deploy to Kubernetes locally](../labs/02-k8s-local.md)
+
 ## What’s inside `reference-implementation/`
 
 - **Services (Go)**
@@ -24,7 +26,13 @@ This repo includes a small “reference implementation” that you can run local
 
 ## How the docs map to the repo
 
-- **00 — Roadmap** → start the local stack: [`labs/01-local-run.md`](../labs/01-local-run.md)
+### Labs (hands-on)
+
+- Lab 01 → run locally (Docker Compose): [`labs/01-local-run.md`](../labs/01-local-run.md)
+- Lab 02 → run on Kubernetes (kind/minikube): [`labs/02-k8s-local.md`](../labs/02-k8s-local.md)
+
+### Chapters (concepts → artifacts)
+
 - **01 — DDD** → service boundaries: [`reference-implementation/services/`](../reference-implementation/services/)
 - **02 — EDA + CQRS** → local broker + projections as exercises: [`reference-implementation/infra/docker-compose.yml`](../reference-implementation/infra/docker-compose.yml)
 - **03 — Communication** → gRPC contract + HTTP endpoint: [`reference-implementation/proto/orders.proto`](../reference-implementation/proto/orders.proto), [`reference-implementation/services/`](../reference-implementation/services/)
@@ -39,4 +47,3 @@ This repo includes a small “reference implementation” that you can run local
 ---
 
 **Back:** [Docs index](README.md)
-

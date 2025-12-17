@@ -30,6 +30,7 @@ This folder is the core learning path for the repo. Each chapter is short, opini
 
 - Labs live in `labs/` (start here): [Labs index](../labs/README.md)
 - [Lab 01 — Run the reference system locally](../labs/01-local-run.md)
+- [Lab 02 — Deploy to Kubernetes locally](../labs/02-k8s-local.md)
 
 ## Contributing to docs
 

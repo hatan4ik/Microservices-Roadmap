@@ -63,7 +63,10 @@ If you don’t know what “healthy” looks like, autoscaling just makes failur
 - Kubernetes manifests: [`reference-implementation/k8s/`](../reference-implementation/k8s/)
 - GitOps example (Argo CD Application): [`reference-implementation/gitops/argocd-application.yaml`](../reference-implementation/gitops/argocd-application.yaml)
 - CI pipeline example: [`reference-implementation/.github/workflows/ci.yaml`](../reference-implementation/.github/workflows/ci.yaml)
-- Apply manifests (from `reference-implementation/`): `make k8s-apply`
+- Deploy locally (hands-on): [`labs/02-k8s-local.md`](../labs/02-k8s-local.md)
+- Apply manifests (from `reference-implementation/`):
+  - minimal: `make k8s-apply-minimal`
+  - full set: `make k8s-apply`
 
 ## Exercises (45–90 min)
 
