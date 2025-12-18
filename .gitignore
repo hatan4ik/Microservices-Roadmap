@@ -1,0 +1,53 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.swn
+*.tmp
+*.log
+*.bak
+*.orig
+.idea/
+.vscode/
+*.iml
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+.envrc
+
+# Go build artifacts
+bin/
+vendor/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.a
+*.o
+*.prof
+*.pprof
+*.cpuprofile
+*.memprofile
+coverage.out
+*.coverprofile
+
+# Node / k6 tooling
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Trunk-generated files
+.trunk/cache/
+.trunk/out/
+.trunk/tmp/
+.trunk/plugins/
+.trunk/logs/
+.trunk/notifications/
+.trunk/actions/
+.trunk/tools/
