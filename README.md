@@ -8,16 +8,16 @@ It’s written like a practical “field guide”: **concepts → trade-offs →
 
 ## How to use this repo (recommended learning path)
 
-1. Start at the docs index: [`docs/README.md`](docs/README.md)
-2. Read the roadmap: [`docs/00-roadmap.md`](docs/00-roadmap.md)
-3. Work through chapters in order (`docs/01-*` … `docs/10-*`)
-4. Run the reference implementation locally: [`labs/01-local-run.md`](labs/01-local-run.md)
-5. Deploy to Kubernetes (kind/minikube or real cluster): [`labs/02-k8s-local.md`](labs/02-k8s-local.md)
+1. Start at the docs [index](docs/README.md).
+2. Read the [roadmap](docs/00-roadmap.md).
+3. Work through chapters in order (`docs/01-*` … `docs/10-*`).
+4. Run the reference implementation [locally](labs/01-local-run.md).
+5. Deploy to [Kubernetes](labs/02-k8s-local.md) (kind/minikube or real cluster).
 6. Add governance examples:
-   - policies: [`reference-implementation/policies/`](reference-implementation/policies/)
-   - mesh: [`reference-implementation/mesh/`](reference-implementation/mesh/)
-   - chaos: [`reference-implementation/chaos/`](reference-implementation/chaos/)
-   - CI: [`reference-implementation/.github/workflows/`](reference-implementation/.github/workflows/)
+   - [policies](reference-implementation/policies/)
+   - [mesh](reference-implementation/mesh/)
+   - [chaos](reference-implementation/chaos/)
+   - [CI](reference-implementation/.github/workflows/)
 
 ---
 
