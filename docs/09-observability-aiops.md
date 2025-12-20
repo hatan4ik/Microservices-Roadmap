@@ -25,6 +25,8 @@ You don’t “pick one.” You correlate them with:
 - consistent service naming and environment labels
 - resource attributes (region, cluster, version)
 
+> **Tip:** For a systematic framework on how to use these signals to fix broken clusters (especially in interviews), see [Chapter 11 — Kubernetes Interview Prep & Troubleshooting](11-k8s-interview-prep.md).
+
 ## What “good telemetry” looks like (a concrete checklist)
 
 - every request has a trace ID

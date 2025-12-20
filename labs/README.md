@@ -6,6 +6,7 @@ Hands-on labs for the repo. Labs are designed to be short and runnable without e
 
 1. [Lab 01 — Run the reference system locally](01-local-run.md)
 2. [Lab 02 — Deploy to Kubernetes locally](02-k8s-local.md)
+3. [Lab 03 — Kubernetes Troubleshooting Challenge](03-k8s-troubleshooting.md)
 
 ## Notes
 

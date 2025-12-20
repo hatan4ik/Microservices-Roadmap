@@ -15,6 +15,7 @@ This folder is the core learning path for the repo. Each chapter is short, opini
 9. [08 — Resilience + chaos engineering](08-resilience-chaos.md)
 10. [09 — Observability + AIOps](09-observability-aiops.md)
 11. [10 — Advanced testing](10-testing.md)
+12. [11 — Kubernetes Interview Prep](11-k8s-interview-prep.md)
 
 ## Reference implementation
 
@@ -31,6 +32,7 @@ This folder is the core learning path for the repo. Each chapter is short, opini
 - Labs live in `labs/` (start here): [Labs index](../labs/README.md)
 - [Lab 01 — Run the reference system locally](../labs/01-local-run.md)
 - [Lab 02 — Deploy to Kubernetes locally](../labs/02-k8s-local.md)
+- [Lab 03 — Kubernetes Troubleshooting Challenge](../labs/03-k8s-troubleshooting.md)
 
 ## Contributing to docs
 

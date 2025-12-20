@@ -15,6 +15,7 @@ This roadmap is organized around **interconnected disciplines** that map directl
 8. **Reliability**: timeouts, rate limits, circuit breakers, chaos engineering
 9. **Observability**: logs/metrics/traces, correlation, SLOs, AIOps patterns
 10. **Testing at scale**: contracts, drills, synthetic monitoring
+11. **Interview Prep**: Systematic troubleshooting, on-prem deep dives, failure scenarios
 
 If you only remember one thing: **do fewer things, end-to-end, with high quality** (telemetry + deployability)
 before you add more services.
