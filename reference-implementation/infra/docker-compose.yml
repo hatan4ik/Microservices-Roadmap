@@ -1,13 +1,17 @@
 services:
   catalog:
-    build: ../services/catalog-go
+    build:
+      context: ..
+      dockerfile: services/catalog-go/Dockerfile
     environment:
       - CATALOG_ADDR=:8080
     ports:
       - "8080:8080"
 
   orders:
-    build: ../services/orders-go
+    build:
+      context: ..
+      dockerfile: services/orders-go/Dockerfile
     environment:
       - ORDERS_GRPC_ADDR=:50051
     ports:
