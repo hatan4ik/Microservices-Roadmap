@@ -4,11 +4,12 @@ WORKDIR /src
 # Copy shared modules (if any in future)
 # COPY proto/ proto/
 
+# Copy the service and its go.mod/go.sum
+COPY services/catalog-go/ services/catalog-go/
+
 # Build service
 WORKDIR /src/services/catalog-go
-COPY services/catalog-go/go.mod services/catalog-go/go.sum* ./
-RUN go mod download
-COPY services/catalog-go/ .
+RUN go mod tidy
 RUN CGO_ENABLED=0 go build -o /out/catalog .
 
 FROM gcr.io/distroless/static-debian12

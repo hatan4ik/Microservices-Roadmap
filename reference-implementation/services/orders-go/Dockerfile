@@ -4,11 +4,12 @@ WORKDIR /src
 # Copy shared modules
 COPY proto/ proto/
 
+# Copy the service and its go.mod/go.sum
+COPY services/orders-go/ services/orders-go/
+
 # Build service
 WORKDIR /src/services/orders-go
-COPY services/orders-go/go.mod services/orders-go/go.sum* ./
-RUN go mod download
-COPY services/orders-go/ .
+RUN go mod tidy
 RUN CGO_ENABLED=0 go build -o /out/orders .
 
 FROM gcr.io/distroless/static-debian12
