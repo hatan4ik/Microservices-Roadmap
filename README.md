@@ -40,20 +40,20 @@ docker compose -f reference-implementation/infra/docker-compose.yml down -v
 
 ## Repo structure
 
-- `docs/` – chapters (O’Reilly-style narrative + checklists)
-- `diagrams/` – Mermaid diagrams you can paste into GitHub or Docs
-- `labs/` – hands-on walkthroughs (start with `labs/01-local-run.md`)
-- `reference-implementation/`
-  - `services/` – small services (Go HTTP + Go gRPC)
-  - `proto/` – protobuf IDL
-  - `infra/` – local dev stack (Postgres + Kafka-compatible broker)
-  - `k8s/` – Kubernetes manifests (deploy, svc, hpa, pdb, networkpolicy)
-  - `gitops/` – Argo CD example
-  - `policies/` – OPA/Rego + Kyverno examples
-  - `mesh/` – Istio/Linkerd-style examples (traffic, mTLS)
-  - `chaos/` – Chaos Mesh experiments
-  - `tests/` – Pact-style contracts + k6 synthetic + failure drills
-  - `.github/workflows/` – CI pipeline (build/test/scan)
+- [`docs/`](docs/) – chapters (O’Reilly-style narrative + checklists)
+- [`diagrams/`](diagrams/) – Mermaid diagrams you can paste into GitHub or Docs
+- [`labs/`](labs/) – hands-on walkthroughs (start with [`labs/01-local-run.md`](labs/01-local-run.md))
+- [`reference-implementation/`](reference-implementation/)
+  - [`services/`](reference-implementation/services/) – small services (Go HTTP + Go gRPC)
+  - [`proto/`](reference-implementation/proto/) – protobuf IDL
+  - [`infra/`](reference-implementation/infra/) – local dev stack (Postgres + Kafka-compatible broker)
+  - [`k8s/`](reference-implementation/k8s/) – Kubernetes manifests (deploy, svc, hpa, pdb, networkpolicy)
+  - [`gitops/`](reference-implementation/gitops/) – Argo CD example
+  - [`policies/`](reference-implementation/policies/) – OPA/Rego + Kyverno examples
+  - [`mesh/`](reference-implementation/mesh/) – Istio/Linkerd-style examples (traffic, mTLS)
+  - [`chaos/`](reference-implementation/chaos/) – Chaos Mesh experiments
+  - [`tests/`](reference-implementation/tests/) – Pact-style contracts + k6 synthetic + failure drills
+  - [`.github/workflows/`](reference-implementation/.github/workflows/) – CI pipeline (build/test/scan)
 
 ---
 
